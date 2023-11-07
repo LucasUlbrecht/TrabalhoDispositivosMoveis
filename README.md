@@ -5,7 +5,7 @@
 
 A sorveteria sorv sorbet, fez uma requisição ao grupo G6, é uma aplicação simples de gerenciamento de usuários, pedidos e estoque. Com a aplicação a sorbet, podera cadastrar e coordenar suas diversas variaveis num unico ambiente de facil acesso, e os clientes de fora poderão encontrar mais facilmente as multiplas sorveterias dos franqueados sorbet. Assim ajudando tanto em marketing quanto nas tarefas administrativas da empresa;
 
-Usuários
+##### Usuários
 
 Pessoa: Nível maximo e mais abstrato de usuário, este representa qualquer pessoa que vá acessar o sistema, é referente a qualquer um que quer ter um acesso sem um cadastro amplo de informações, apenas tera acesso as localidades dos franqueados;
 
@@ -14,10 +14,10 @@ Funcionario: Este podera acessar um nível mais interno, podera controlar pedido
 Administrador: Esse usuário podera gerenciar, estoque, usuários e todas as coisas que um funcionario gerencia;
 
 
-Requisitos funcionais
+### Requisitos funcionais
 
 
-Lançamentos diversos:
+##### Lançamentos diversos:
 
 O sistema deve permitir a inclusão, alteração e remoção de sorvetes, com os seguintes atributos: código do produto, nome do produto, tipo do sorvete, valor do sorvete e quantidade em estoque.
 O sistema deve permitir a inclusão, alteração e remoção de pessoa, com os seguintes atributos: CPF, nome, endereço, cidade, estado, telefone, foto, local e e-mail. 
@@ -25,7 +25,7 @@ O sistema deve permitir a inclusão, alteração e remoção de funcionário, co
 O sistema deve permitir a inclusão, alteração e remoção de acompanhamentos, com os seguintes atributos: código do produto, nome do produto, tipo de acompanhamento, quantidade em estoque.
 
 
-Controle e nível de acesso:
+##### Controle e nível de acesso:
 
 O sistema deve exigir que os funcionários façam login.
 Somente o administrador pode realizar a inclusão, alteração e exclusão de funcionários usuários do sistema, bem como delegar a permissão de administrador a outro funcionário.
@@ -33,19 +33,19 @@ O sistema deve permitir que somente o funcionário e o administrador façam a in
 O sistema deve permitir que somente o administrador faça a inclusão, alteração e exclusão de funcionários.
 
 
-Requisitos não-funcionais
+### Requisitos não-funcionais
 
-Desempenho:
+###### Desempenho:
 O sistema deve salvar as informações no banco de dados imediatamente após a conclusão dos cadastros. O tempo limite deve ser de 15s. Após esse tempo, o sistema informa ao usuário que não foi possível estabelecer a conexão com o banco de dados.
 O sistema deve permitir o acesso simultâneo de até 5 funcionários conectados a uma rede local.
 
 
-Confiabilidade:
+###### Confiabilidade:
 O sistema deve ter capacidade para recuperar os dados perdidos da última operação que realizou em caso de falha.
 O sistema deve fornecer facilidades para a realização de backups dos dados.
 
 
-Segurança: 
+###### Segurança: 
 Todas as senhas do sistema devem ser criptografadas. 
 O sistema de acesso e controle de senhas deve ser fortemente seguro. 
 O sistema deve operar apenas na rede interna onde ele está sendo executado.  
@@ -53,9 +53,9 @@ O sistema deve diferenciar as permissões de acesso e identificação para difer
 O sistema deve emitir uma mensagem de erro em caso de acesso não autorizado ou falta de permissão para realizar ações.
 
 
-Manutenibilidade: 
+###### Manutenibilidade: 
 O sistema deve ser implantado em módulos, permitindo a adição, exclusão ou alteração de partes do sistema sem afetar o seu funcionamento total. 
 
 
-Portabilidade:
+###### Portabilidade:
 O sistema deve ser capaz de armazenar os dados em base de dados.
