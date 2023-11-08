@@ -19,10 +19,10 @@ Administrador: Esse usuário podera gerenciar, estoque, usuários e todas as coi
 
 ##### Lançamentos diversos:
 
-O sistema deve permitir a inclusão, alteração e remoção de sorvetes, com os seguintes atributos: código do produto, nome do produto, tipo do sorvete, valor do sorvete e quantidade em estoque.
-O sistema deve permitir a inclusão, alteração e remoção de pessoa, com os seguintes atributos: CPF, nome, endereço, cidade, estado, telefone, foto, local e e-mail. 
-O sistema deve permitir a inclusão, alteração e remoção de funcionário, com os seguintes atributos: CPF, nome, endereço, cidade, estado, telefone, salário, foto, local e e-mail. 
-O sistema deve permitir a inclusão, alteração e remoção de acompanhamentos, com os seguintes atributos: código do produto, nome do produto, tipo de acompanhamento, quantidade em estoque.
+O sistema deve permitir a inclusão, alteração e remoção de sorvetes, com os seguintes atributos: código do produto, nome do produto, tipo do sorvete, valor do sorvete, foto do sorvete e quantidade em estoque.
+O sistema deve permitir a inclusão, alteração e remoção de pessoa, com os seguintes atributos: CPF, nome, endereço, cidade, estado, telefone, foto do usuário, local e e-mail. 
+O sistema deve permitir a inclusão, alteração e remoção de funcionário, com os seguintes atributos: CPF, nome, endereço, cidade, estado, telefone, salário, foto do usuário, local e e-mail. 
+O sistema deve permitir a inclusão, alteração e remoção de acompanhamentos, com os seguintes atributos: código do produto, nome do produto, tipo de acompanhamento, quantidade em estoque, e foto do acompanhamento.
 
 
 ##### Controle e nível de acesso:
