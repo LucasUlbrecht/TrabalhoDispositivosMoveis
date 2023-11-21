@@ -1,0 +1,36 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Arquivos gerados pelo Android Studio
+.gradle/
+.idea/
+/build/
+/captures/
+
+# Arquivos de configuração local
+local.properties
+
+# Arquivos de compilação e saída de construção do Android
+*.apk
+*.ap_
+
+# Logs e arquivos temporários
+*.log
+*.txt
+*.tmp
+*.swp
+
+# Cache
+/caches/
