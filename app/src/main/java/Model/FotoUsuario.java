@@ -1,4 +1,4 @@
-package LogicaDeNegocio;
+package Model;
 
 public class FotoUsuario {
     private byte[] foto; // Usando byte array para armazenar a imagem

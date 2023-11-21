@@ -1,7 +1,7 @@
-package LogicaDeNegocio;
+package Model;
 
-import LogicaDeNegocio.FotoUsuario;
-import LogicaDeNegocio.NivelAcesso;
+import Model.FotoUsuario;
+import Model.NivelAcesso;
 
 public class Pessoa {
 

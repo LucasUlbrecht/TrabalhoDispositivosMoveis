@@ -1,4 +1,4 @@
-package LogicaDeNegocio;
+package Model;
 
 public class NivelAcesso {
     public static int nivel1=1;

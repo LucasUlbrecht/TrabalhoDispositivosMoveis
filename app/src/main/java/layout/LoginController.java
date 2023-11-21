@@ -1,16 +1,17 @@
-package com.example.grandeatividade.PaginaAcessoPessoa;
+package layout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Resources;
+
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.grandeatividade.PaginaAcessoPessoa.cadastroPage;
 import com.example.grandeatividade.R;
 
-public class MainActivity extends AppCompatActivity {
+import LogicaDeNegocio.UseCaseLogin;
+
+public class LoginController extends AppCompatActivity {
 
     Boolean cadastrado;
 
@@ -27,20 +28,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume(){
         super.onResume();
-
-
-        Resources res = getResources();
-        cadastrado = Boolean.parseBoolean(res.getString(R.string.cadastrado));
-
-
-
+        UseCaseLogin.verificaCadastro(this);
     }
 
 
     public void cadastroPage(View view){
 
 
-        Intent intent = new Intent(this, cadastroPage.class);
+        Intent intent = new Intent(this, CadastroController.class);
         startActivity(intent);
     }
 }
