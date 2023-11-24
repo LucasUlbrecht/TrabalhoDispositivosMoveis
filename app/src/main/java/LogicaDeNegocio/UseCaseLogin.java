@@ -1,7 +1,5 @@
 package LogicaDeNegocio;
 
-import static androidx.appcompat.graphics.drawable.DrawableContainerCompat.Api21Impl.getResources;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,10 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.grandeatividade.R;
 
 import Model.Pessoa;
+import layout.funcionarioController;
 import Pacote_de_Dados.DB;
 import Pacote_de_Dados.ORM.PessoaData;
 import ProteceoDados.Security;
-import layout.LoginController;
 
 public class UseCaseLogin {
     private static AppCompatActivity controller;
@@ -58,7 +56,7 @@ public class UseCaseLogin {
             String loginTmp = Security.recuperar(getController().getApplicationContext(), getIdLogin());
             String senhaTmp = Security.recuperar(getController().getApplicationContext(), getIdSenha());
             if(verificaPessoaBD(loginTmp, senhaTmp)){
-                Intent intent = new Intent(getController(), paginaFuncionario.class);
+                Intent intent = new Intent(getController(), funcionarioController.class);
                 intent.putExtra(getLoginResource(), loginTmp);
 
                 SharedPreferences sharedPreferences = getController().getSharedPreferences("app_preferences", Context.MODE_PRIVATE);
@@ -74,7 +72,7 @@ public class UseCaseLogin {
     private static boolean verificaPessoaBD(String login, String senha){
         try{
             DB bd = DB.getDatabase(getController());
-            PessoaData pessoaTmp = bd.pessoaDao().buscarPessoaCpf(login);
+            Pessoa pessoaTmp = bd.pessoaDao().buscarPessoaCpf(login);
             if(pessoaTmp.getPassword()==senha && pessoaTmp.getCpf()==login){
                 return true;
             }else{

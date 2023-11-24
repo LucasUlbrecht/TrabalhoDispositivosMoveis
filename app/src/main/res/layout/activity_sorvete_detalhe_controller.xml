@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.SorveteDetalheController">
+    <?xml version="1.0" encoding="utf-8"?>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="118dp"
+        android:layout_height="43dp"
+        android:onClick="retornar"
+        android:text="retornar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="Código:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonGerarCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="Gerar Código"
+        android:onClick="gerarCodigo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCodigo"
+        android:layout_width="275dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="392dp"
+        android:layout_weight="1"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGerarCodigo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo:" />
+
+        <EditText
+            android:id="@+id/editTextTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewQuantidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantidade:" />
+
+        <EditText
+            android:id="@+id/editTextQuantidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/textViewValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valor:" />
+
+        <EditText
+            android:id="@+id/editTextValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+
+        <TextView
+            android:id="@+id/textViewNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome:" />
+
+        <EditText
+            android:id="@+id/editTextNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/buttonAtualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="atualizar"
+            android:text="Atualizar" />
+
+        <Button
+            android:id="@+id/buttonDeletar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="deletar"
+            android:text="Deletar" />
+
+        <Button
+            android:id="@+id/buttonGerarNovo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="adicionar"
+            android:text="AdicionarNovo" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

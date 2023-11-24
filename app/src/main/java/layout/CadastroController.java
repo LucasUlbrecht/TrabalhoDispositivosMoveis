@@ -36,8 +36,11 @@ public class CadastroController extends AppCompatActivity {
             Intent intent = new Intent(this, LoginController.class);
             startActivity(intent);
         }else{
-            //error
+            //errordisplay
         }
+    }
+    public void retornar(View view){
+        Intent intent = new Intent(this,LoginController.class);
     }
 
 

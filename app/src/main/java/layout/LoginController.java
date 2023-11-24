@@ -28,7 +28,7 @@ public class LoginController extends AppCompatActivity {
     @Override
     protected void onResume(){
         super.onResume();
-        UseCaseLogin.verificaCadastro(this);
+        UseCaseLogin.verificaLogin(this);
     }
 
 
