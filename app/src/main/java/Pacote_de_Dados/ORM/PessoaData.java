@@ -7,10 +7,10 @@ import androidx.room.PrimaryKey;
 import Model.FotoUsuario;
 import Model.Pessoa;
 
-@Entity(foreignKeys = @ForeignKey(
+@Entity(primaryKeys = "cpf", foreignKeys = @ForeignKey(
         entity = PessoaData.class,
         parentColumns = "gerenteId",
-        childColumns = "pesssoaId",
+        childColumns = "pessoaId",
         onDelete = ForeignKey.CASCADE,
         onUpdate = ForeignKey.CASCADE
 ))

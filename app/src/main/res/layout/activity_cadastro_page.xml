@@ -7,7 +7,7 @@
     tools:context="layout.CadastroController">
 
     <Button
-        android:id="@+id/confirmar"
+        android:id="@+id/bttnGerenciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
@@ -21,8 +21,8 @@
         android:id="@+id/loginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,8 +31,8 @@
         android:id="@+id/passwordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="60dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginField" />
@@ -41,8 +41,8 @@
         android:id="@+id/passwordField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,11 +52,22 @@
         android:id="@+id/loginField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginText" />
+
+    <Button
+        android:id="@+id/retornar"
+        android:layout_width="45dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="7dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="retornar"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,11 +14,12 @@ public class Pessoa {
     private FotoUsuario foto;
     int nivel;
     private String email;
+    private String password;
     //private String local;
 
 
     //função gerar pessoa objeto
-    public Pessoa(String cpf, String nome, String endereco, String cidade, String estado, String telefone, FotoUsuario foto, String email){
+    public Pessoa(String cpf, String password, String nome, String endereco, String cidade, String estado, String telefone, FotoUsuario foto, String email){
         setCidade(cidade);
         setCpf(cpf);
         setEmail(email);
@@ -28,9 +29,15 @@ public class Pessoa {
         setTelefone(telefone);
         setFoto(foto);
         setNivel(NivelAcesso.nivel1);
+        setPassword(password);
     }
 
     //getters & setters
+
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getNome() {
         return Nome;
@@ -102,5 +109,9 @@ public class Pessoa {
 
     public int getNivel() {
         return nivel;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
