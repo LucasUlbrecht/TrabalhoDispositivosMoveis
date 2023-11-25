@@ -10,6 +10,7 @@ import android.view.View;
 import com.example.grandeatividade.R;
 
 import LogicaDeNegocio.UseCaseLogin;
+import ProteceoDados.Security;
 
 public class LoginController extends AppCompatActivity {
 
@@ -33,8 +34,6 @@ public class LoginController extends AppCompatActivity {
 
 
     public void cadastroPage(View view){
-
-
         Intent intent = new Intent(this, CadastroController.class);
         startActivity(intent);
     }

@@ -16,7 +16,7 @@ public class Pessoa {
 
 
     //função gerar pessoa objeto
-    public Pessoa(String cpf, String password, String nome, String endereco, String cidade, String estado, FotoUsuario foto, String email){
+    public Pessoa(String cpf, String password, String nome, String endereco, String cidade, String telefone, String estado, FotoUsuario foto, String email){
         setCidade(cidade);
         setCpf(cpf);
         setEmail(email);

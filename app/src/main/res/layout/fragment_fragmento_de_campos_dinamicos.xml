@@ -1,0 +1,16 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="layout.Fragments.FragmentoDeCamposDinamicos">
+
+    <FrameLayout
+        android:id="@+id/frame_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Seu conteúdo dinâmico aqui -->
+
+    </FrameLayout>
+</ScrollView>

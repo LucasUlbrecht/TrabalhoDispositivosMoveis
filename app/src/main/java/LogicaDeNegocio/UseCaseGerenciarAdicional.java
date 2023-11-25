@@ -12,6 +12,7 @@ import java.util.List;
 import Model.Adicionais;
 import Model.Sorvete;
 import Pacote_de_Dados.DB;
+
 import layout.Adapter.ProdutoAdapter;
 import layout.AdicionalDetalheController;
 import layout.SorveteDetalheController;
@@ -62,11 +63,11 @@ public class UseCaseGerenciarAdicional {
     public static void modificarTupla(AppCompatActivity app, String tipoOp) {
         db=DB.getDatabase(app);
         Adicionais sorvete= TelaGeradora.obterDadosDosCampos(app, Adicionais.class);
-        if(tipoOp=="deletar"){
+        if(tipoOp.equals("deletar")){
             db.adicionalDAO().deleteAdicionais(sorvete);
-        }else if(tipoOp=="atualizar"){
+        }else if(tipoOp.equals("atualizar")){
             db.adicionalDAO().updateAdicionais(sorvete);
-        }else if(tipoOp=="inserir"){
+        }else if(tipoOp.equals("inserir")){
             db.adicionalDAO().insertAdicionais(sorvete);
         }
     }

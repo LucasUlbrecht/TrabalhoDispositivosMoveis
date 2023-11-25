@@ -61,11 +61,11 @@ public class UseCaseGerenciarSorvete {
     public static void modificarTupla(AppCompatActivity app, String tipoOp) {
         db=DB.getDatabase(app);
         Sorvete sorvete= TelaGeradora.obterDadosDosCampos(app, Sorvete.class);
-        if(tipoOp=="deletar"){
+        if(tipoOp.equals("deletar")){
             db.sorveteDAO().deleteSorvete(sorvete);
-        }else if(tipoOp=="atualizar"){
+        }else if(tipoOp.equals("atualizar")){
             db.sorveteDAO().updateSorvete(sorvete);
-        }else if(tipoOp=="inserir"){
+        }else if(tipoOp.equals("inserir")){
             db.sorveteDAO().insertSorvete(sorvete);
         }
     }
