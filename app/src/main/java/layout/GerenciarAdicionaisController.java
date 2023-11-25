@@ -10,19 +10,21 @@ import android.widget.ListView;
 
 import com.example.grandeatividade.R;
 
+import LogicaDeNegocio.UseCaseGerenciarAdicional;
 import LogicaDeNegocio.UseCaseGerenciarSorvete;
+import Model.Adicionais;
 import Model.Sorvete;
+import layout.Adapter.ProdutoAdapter;
 import layout.Adapter.SorveteAdapter;
-import layout.ItemClickListeneer.PersonItemClickListener;
 
-public class GerenciarSorveteController extends AppCompatActivity {
+public class GerenciarAdicionaisController extends AppCompatActivity {
     ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gerenciar_sorvete_page);
-        listView = findViewById(R.id.listaSorvete);
+        setContentView(R.layout.activity_gerenciar_adicionais_page);
     }
+
 
     @Override
     protected void onResume() {
@@ -35,14 +37,14 @@ public class GerenciarSorveteController extends AppCompatActivity {
         startActivity(intent);
     }
     public void carregarListView(){
-        SorveteAdapter adapter = UseCaseGerenciarSorvete.gerarListView(this);
+        ProdutoAdapter adapter = UseCaseGerenciarAdicional.gerarListView(this);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Sorvete objetoSelect = UseCaseGerenciarSorvete.coletarSorvetes(this).get(i);
+                Adicionais objetoSelect = UseCaseGerenciarAdicional.coletarAdicional(this).get(i);
 
-                Intent intent = new Intent(GerenciarSorveteController.this, SorveteDetalheController.class);
+                Intent intent = new Intent(GerenciarAdicionaisController.this, AdicionalDetalheController.class);
 
                 intent.putExtra("codigo", objetoSelect.getCodigo());
                 intent.putExtra("criarNovo", false);
@@ -52,7 +54,7 @@ public class GerenciarSorveteController extends AppCompatActivity {
         });
     }
     public void criarNovo(View view){
-        Intent intent = new Intent(GerenciarSorveteController.this, SorveteDetalheController.class);
+        Intent intent = new Intent(this, AdicionalDetalheController.class);
         intent.putExtra("criarNovo", true);
         startActivity(intent);
     }

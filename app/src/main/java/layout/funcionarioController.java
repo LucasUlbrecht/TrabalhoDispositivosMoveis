@@ -32,4 +32,8 @@ public class funcionarioController extends AppCompatActivity {
         Intent intent = new Intent(this, GerenciarSorveteController.class);
         startActivity(intent);
     }
+    public void irGerenciarAdicionais(View view){
+        Intent intent = new Intent(this, GerenciarAdicionaisController.class);
+        startActivity(intent);
+    }
 }
