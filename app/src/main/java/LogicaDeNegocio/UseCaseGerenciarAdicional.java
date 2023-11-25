@@ -9,29 +9,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
+import Model.Adicionais;
 import Model.Sorvete;
 import Pacote_de_Dados.DB;
-import layout.Adapter.SorveteAdapter;
+import layout.Adapter.ProdutoAdapter;
 import layout.AdicionalDetalheController;
 import layout.SorveteDetalheController;
 import layout.TelaGeradora;
 
-public class UseCaseGerenciarSorvete {
+public class UseCaseGerenciarAdicional {
     static DB db;
-    public static List<Sorvete> coletarSorvetes(AdapterView.OnItemClickListener app){
+    public static List<Adicionais> coletarAdicional(AdapterView.OnItemClickListener app){
         db = DB.getDatabase((Context) app);
-        return db.sorveteDAO().getAllSorvetes();
+        return db.adicionalDAO().getAllAdicionais();
     }
-    public static SorveteAdapter gerarListView(AppCompatActivity app){
-        return new SorveteAdapter(app, coletarSorvetes((AdapterView.OnItemClickListener) app));
+    public static ProdutoAdapter gerarListView(AppCompatActivity app){
+        return new ProdutoAdapter(app, coletarAdicional((AdapterView.OnItemClickListener) app));
 
     }
-    public static Sorvete RetornarSorvete(AppCompatActivity app, int id){
-        return db.sorveteDAO().getSorveteById(id);
+    public static Adicionais RetornarAdicional(AppCompatActivity app, int id){
+        return db.adicionalDAO().getAdicionaisById(id);
     }
     public static void AtualizarSorvete(AppCompatActivity app, Sorvete s, boolean delete){
         db = DB.getDatabase((Context) app);
-        if(RetornarSorvete(app,s.getCodigo())!=null){
+        if(RetornarAdicional(app,s.getCodigo())!=null){
             if(delete){
                 db.sorveteDAO().deleteSorvete(s);
                 return;
@@ -43,12 +44,12 @@ public class UseCaseGerenciarSorvete {
         return;
     }
 
-    public static Sorvete buscarSorvete(AppCompatActivity app, Intent s) {
+    public static Adicionais buscarAdicional(AppCompatActivity app, Intent s) {
         db=DB.getDatabase(app);
-        return db.sorveteDAO().getSorveteById(s.getIntExtra("codigo", 0));
+        return db.adicionalDAO().getAdicionaisById(s.getIntExtra("codigo", 0));
     }
 
-    public static void carregarTela(SorveteDetalheController app, Intent i, Sorvete s) {
+    public static void carregarTela(AdicionalDetalheController app, Intent i, Adicionais s) {
         TelaGeradora.preencherCampos(app, s);
         if(i.getBooleanExtra("criarNovo",false)){
             app.getBtnAtualizar().setVisibility(View.GONE);
@@ -60,13 +61,13 @@ public class UseCaseGerenciarSorvete {
 
     public static void modificarTupla(AppCompatActivity app, String tipoOp) {
         db=DB.getDatabase(app);
-        Sorvete sorvete= TelaGeradora.obterDadosDosCampos(app, Sorvete.class);
+        Adicionais sorvete= TelaGeradora.obterDadosDosCampos(app, Adicionais.class);
         if(tipoOp=="deletar"){
-            db.sorveteDAO().deleteSorvete(sorvete);
+            db.adicionalDAO().deleteAdicionais(sorvete);
         }else if(tipoOp=="atualizar"){
-            db.sorveteDAO().updateSorvete(sorvete);
+            db.adicionalDAO().updateAdicionais(sorvete);
         }else if(tipoOp=="inserir"){
-            db.sorveteDAO().insertSorvete(sorvete);
+            db.adicionalDAO().insertAdicionais(sorvete);
         }
     }
 }

@@ -1,8 +1,5 @@
 package Model;
 
-import Model.FotoUsuario;
-import Model.NivelAcesso;
-
 public class Pessoa {
 
     private String Cpf;
@@ -19,7 +16,7 @@ public class Pessoa {
 
 
     //função gerar pessoa objeto
-    public Pessoa(String cpf, String password, String nome, String endereco, String cidade, String estado, String telefone, FotoUsuario foto, String email){
+    public Pessoa(String cpf, String password, String nome, String endereco, String cidade, String estado, FotoUsuario foto, String email){
         setCidade(cidade);
         setCpf(cpf);
         setEmail(email);

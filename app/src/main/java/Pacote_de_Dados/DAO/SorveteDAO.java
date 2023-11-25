@@ -12,11 +12,13 @@ import Model.Sorvete;
 
 @Dao
 public interface SorveteDAO {
-    @Query("SELECT * FROM SorveteData")
+    @Query("SELECT * FROM sorveteData")
     List<Sorvete> getAllSorvetes();
 
-    @Query("SELECT * FROM SorveteData WHERE codigo = :id")
+    @Query("SELECT * FROM sorveteData WHERE codigo = :id")
     Sorvete getSorveteById(int id);
+    @Query("SELECT MAX(codigo) FROM sorveteData")
+    int getLastDataCode();
 
     @Insert
     void insertSorvete(Sorvete sorvete);
@@ -27,4 +29,3 @@ public interface SorveteDAO {
     @Delete
     void deleteSorvete(Sorvete sorvete);
 }
-

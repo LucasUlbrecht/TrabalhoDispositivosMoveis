@@ -12,6 +12,8 @@ import com.example.grandeatividade.R;
 
 import LogicaDeNegocio.UseCaseGerenciarSorvete;
 import Model.Sorvete;
+import Pacote_de_Dados.DAO.SorveteDAO;
+import Pacote_de_Dados.HandlerAcess.DataAccessHandler;
 
 public class SorveteDetalheController extends AppCompatActivity {
     Button btnAtualizar;
@@ -31,6 +33,19 @@ public class SorveteDetalheController extends AppCompatActivity {
         Sorvete s = UseCaseGerenciarSorvete.buscarSorvete(this, intent);
         iniciarTela(s);
     }
+
+    public Button getBtnAtualizar() {
+        return btnAtualizar;
+    }
+
+    public Button getBtnDelete() {
+        return btnDelete;
+    }
+
+    public EditText getEditTextCodigo() {
+        return editTextCodigo;
+    }
+
     public void retornar(View view){
         Intent intent = new Intent(this, GerenciarSorveteController.class);
         startActivity(intent);
@@ -48,6 +63,13 @@ public class SorveteDetalheController extends AppCompatActivity {
         retornar(view);
     }
     public void iniciarTela(Sorvete s){
-        UseCaseGerenciarSorvete.carregarTela(this, s);
+        Intent intent = getIntent();
+        UseCaseGerenciarSorvete.carregarTela(this, intent, s);
+    }
+    public void gerarCodigo(View view) {
+        int lastSequenceValue = DataAccessHandler.getLastSequenceValue(SorveteDAO.class, getApplicationContext());
+        lastSequenceValue++;
+
+        editTextCodigo.setText(String.valueOf(lastSequenceValue));
     }
 }

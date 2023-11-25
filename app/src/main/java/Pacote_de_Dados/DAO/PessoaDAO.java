@@ -13,10 +13,10 @@ import Pacote_de_Dados.ORM.PessoaData;
 
 @Dao
 public interface PessoaDAO {
-    @Query("SELECT * FROM PessoaData")
+    @Query("SELECT * FROM pessoaData")
     List<Pessoa> getAllPessoas();
 
-    @Query("SELECT * FROM PessoaData WHERE cpf = :cpf")
+    @Query("SELECT * FROM pessoaData WHERE cpf = :cpf")
     Pessoa buscarPessoaCpf(String cpf);
 
     @Insert
