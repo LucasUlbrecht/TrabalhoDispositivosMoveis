@@ -39,4 +39,24 @@
         app:layout_constraintStart_toEndOf="@+id/bttnGerenciar"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btnGerenciarFuncionario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:onClick="gerenciarFuncionario"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="416dp" />
+
+    <Button
+        android:id="@+id/btnGerenciarPessoas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="39dp"
+        android:text="Button"
+        android:onClick="gerenciarPessoas"
+        app:layout_constraintStart_toEndOf="@+id/btnGerenciarFuncionario"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdicionais" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

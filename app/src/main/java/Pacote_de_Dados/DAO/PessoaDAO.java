@@ -15,17 +15,20 @@ import Pacote_de_Dados.ORM.PessoaData;
 public interface PessoaDAO {
     @Query("SELECT * FROM pessoaData")
     List<Pessoa> getAllPessoas();
-
+    @Query("SELECT * FROM pessoaData where nivel=2")
+    List<Pessoa> getAllFuncionario();
+    @Query("SELECT * FROM pessoaData a inner join pessoaData f on a.pessoaId=f.gerenteId where :id=f.gerenteId")
+    List<Pessoa> getAllFuncionarioPorGerente(String id);
     @Query("SELECT * FROM pessoaData WHERE cpf = :cpf")
     Pessoa buscarPessoaCpf(String cpf);
 
     @Insert
-    void insertPessoa(PessoaData pessoa);
+    void insertPessoa(Pessoa pessoa);
 
     @Update
-    void updatePessoa(PessoaData pessoa);
+    void updatePessoa(Pessoa pessoa);
 
     @Delete
-    void deletePessoa(PessoaData pessoa);
+    void deletePessoa(Pessoa pessoa);
 
 }

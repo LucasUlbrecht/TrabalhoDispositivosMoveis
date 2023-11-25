@@ -21,8 +21,9 @@ public class PessoaData extends Pessoa{
     int gerenteId;
     String password;
 
-    public PessoaData(String cpf, String nome, String endereco, String cidade, String estado, String telefone, FotoUsuario foto, String email) {
-        super(cpf, nome, endereco, cidade, estado, telefone, foto, email);
+    public PessoaData(String cpf, String password, String nome, String endereco, String cidade, String telefone, String estado, FotoUsuario foto, String email) {
+
+        super(cpf,password, nome, endereco, cidade, estado, telefone, foto, email);
     }
 
 
